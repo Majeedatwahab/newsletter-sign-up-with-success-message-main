@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    padding: 1.3rem;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.left {
+    color: hsl(234, 29%, 20%);
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+.left-content h1 {
+    margin-bottom: 0.3rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.left-content p,
+.left-content ul {
+    margin-bottom: 2rem;
+}
+
+.left-content ul li {
+    list-style-image: url(assets/images/icon-list.svg);
+    list-style-position: inside;
+    line-height: 1.5rem;
+}
+
+.left-content ul li::before {
+    content: "";
+    margin-right: 0.5rem;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.error {
+    color: hsl(4, 100%, 67%);
+    display: none;
+}
+
+.form-content label .error.active {
+    display: block;
+}
+
+.form-content input,
+.form-content button {
+    padding: 1rem;
+    border-radius: 0.7rem;
+    margin-bottom: 1.3rem;
+    outline: 0;
+    border: 1px solid hsl(231, 7%, 60%);
+}
+
+.form-content button {
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    cursor: pointer;
+    border: 0;
+}
+
+.form-content button:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+
+.form-content input:hover,
+.form-content button:focus {
+    border-color: hsl(234, 29%, 20%);
+}
+
+.success-msg {
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 300px;
+    height: auto;
+    padding: 1rem;
+    margin: 0 auto;
+    display: none;
+}
+
+.success-msg img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.success-msg h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+}
+
+.success-msg p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: hsl(234, 29%, 20%);
+}
+
+.success-msg span {
+    font-weight: 700;
+}
+
+.success-msg button {
+    width: 100%;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+
+.success-msg button:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+
+@media (max-width: 480px) {
+    .left-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .success-msg h2 {
+        font-size: 1.8rem;
+    }
+
+    .success-msg p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+
+    .left {
+        padding: 0.5rem;
+    }
+
+    .right img {
+        width: 100%;
+    }
+
+    .left-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .left-content ul {
+        margin-bottom: 1rem;
+    }
+
+    .left-content p {
+        font-size: 0.85rem;
+    }
+
+    .form-content button,
+    .success-msg button {
+        padding: 1.2rem;
+      
+    }
+}
+
+@media (hover: none) {
+
+    .form-content button:hover,
+    .success-msg button:hover {
+        background-color: hsl(234, 29%, 20%);
+      
+    }
+}
